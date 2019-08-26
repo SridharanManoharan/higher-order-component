@@ -6,7 +6,7 @@ class UserProfile extends React.Component {
     componentDidMount() {
         fetch(this.props.dataSource)
         .then(response => response.json())
-        .then(data => this.setState({posts: data}))
+        .then(data => this.setState({posts: data.slice(0, 3)}))
     }
     render(){
         return(
